@@ -13,6 +13,11 @@ class User extends ZfcUser
 
     protected $createdAt;
 
+    public function __construct()
+    {
+        $this->createdAt = date('Y-m-d H:i:s');
+    }
+
     public function getCreatedAt()
     {
         return $this->createdAt;
