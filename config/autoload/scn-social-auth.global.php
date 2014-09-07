@@ -130,8 +130,8 @@ $settings = array(
 return array(
     'scn-social-auth' => $settings,
     'service_manager' => array(
-        'aliases' => array(
-            'ScnSocialAuth_ZendDbAdapter' => (isset($settings['zend_db_adapter'])) ? $settings['zend_db_adapter']: 'Zend\Db\Adapter\Adapter',
+        'invokables' => array(
+            'Zend\Session\SessionManager' => 'Zend\Session\SessionManager',
         ),
     ),
 );
