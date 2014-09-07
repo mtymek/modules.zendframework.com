@@ -45,9 +45,11 @@ class Module extends EventProvider implements ServiceLocatorAwareInterface
         $module->setOwner($owner->login);
         $module->setPhotoUrl($owner->avatar_url);
 
+        $module->setUpdatedAt(date('Y-m-d H:i:s'));
         if($update) {
             $this->getModuleMapper()->update($module);
         } else {
+            $module->setCreatedAt(date('Y-m-d H:i:s'));
             $this->getModuleMapper()->insert($module);
         }
 

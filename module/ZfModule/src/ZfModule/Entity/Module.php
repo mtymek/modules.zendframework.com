@@ -25,12 +25,12 @@ class Module implements ModuleInterface
     protected $url = null;
 
     /**
-     * @var int
+     * @var string
      */
     protected $createdAt = null;
 
     /**
-     * @var int
+     * @var string
      */
     protected $updatedAt = null;
 
